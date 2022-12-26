@@ -9,9 +9,11 @@ GRAPH_ROUTES=[
 ]
 
 def graph(type):
-    match type: 
-        case "ARTICULATIONS":return {"result":"arts"}
-        case "HUNGARIAN":return {"result":"hung"}
+     
+    if type=="ARTICULATIONS":
+        return {"result":"arts"}
+    elif type=="HUNGARIAN":
+        return {"result":"hung"}
 
 @app.route("/graph",methods=["POST"])
 def root():
