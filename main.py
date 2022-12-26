@@ -16,7 +16,7 @@ def graph(type):
 @app.route("/graph",methods=["POST"])
 def root():
     content_type=request.content_type
-    if content_type.lower() is not"application/json":
+    if content_type.lower() !="application/json":
         return "Invalid request Content-Type Header.",500
     body=request.get_json()
     if "graph_id" not in body:
